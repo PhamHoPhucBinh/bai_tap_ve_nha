@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>use addeventlistener for mouse and click</title>
+</head>
+<h1 id="dong1">pham ho phuc binh</h1>
+<h1 id="dong2">pham hoang anh</h1>
+<body>
+
+</body>
+</html>
+<script>
+    var dong1 = document.getElementById("dong1")
+    dong1.addEventListener("mouseover",mouseover);
+    dong1.addEventListener("mouseout",mouseout);
+
+    function mouseover() {
+        document.getElementById("dong1").style.color="red"
+    }
+    function mouseout() {
+        document.getElementById("dong1").style.color="green"
+    }
+</script>
+<script>
+
+    var dong2 = document.getElementById("dong2")
+    dong2.addEventListener("mouseover",mouseover);
+    dong2.addEventListener("mouseout",mouseout);
+
+    function mouseover() {
+        document.getElementById("dong2").style.color="red"
+    }
+    function mouseout() {
+        document.getElementById("dong2").style.color="green"
+    }
+
+
+
+
+</script>

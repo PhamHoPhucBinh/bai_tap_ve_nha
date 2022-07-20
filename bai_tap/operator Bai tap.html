@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2 </title>
+</head>
+<body>
+<h1>chuyen doi do C sang F
+</h1>
+<input type="number" id="doC"> <sub>o</sub>C </input>
+<button type="button" id="transfer" onclick="chuyendoi()">Transfer</button>
+<input type="number" id="doF"> <sub>o </sub>F </input>
+
+</body>
+<script>
+let doC = document.getElementById('doC');
+function chuyendoi(){
+    let C = parseInt(document.getElementById('doC').value);
+    let F = parseInt(document.getElementById('doF').value);
+     F = (C*9)/5 +32;
+    document.getElementById("doF").value=F
+}
+</script>
+
+
+<h1>chuong trinh tinh dien tich hinh tron</h1>
+<input type="number" id="chieudai">cm</input>
+<input type="number" id="chieurong">cm</input>
+<button onclick="tinhdientich()" type="button" id="tinhdientich">tinhdientich</button>
+<output id="ketquab2"> </output>
+<span>cm2</span>
+<script>
+    let chieudai = document.getElementById('chieudai');
+    let chieurong = document.getElementById('chieurong');
+    function tinhdientich() {
+        let length = document.getElementById('chieudai').value;
+        let width = document.getElementById('chieurong').value;
+        document.getElementById('ketquab2').value=length*width;
+
+    }
+</script>
+
+<h1>tinh dien tich va chu vi hinh tron</h1>
+<input id="bankinh" type="number">cm</input></br>
+<button type="button" onclick="tinhchuvihinhtron()" id="chuvi">tinh chu vi</button>
+<output id="ketquachuvi"></output>
+<span>cm</span></br>
+<button type="button" onclick="tinhdientichhinhtron()" id="dientich">tinh dien tich</button>
+<output id="ketquadientich"></output>
+<span>cm2</span>
+<script>
+    let bankinh = document.getElementById('bankinh');
+    function tinhchuvihinhtron() {
+    let r = document.getElementById('bankinh').value;
+    document.getElementById('ketquachuvi').value=r*2*3.14;}
+    function tinhdientichhinhtron() {
+        let r = document.getElementById('bankinh').value;
+    document.getElementById('ketquadientich').value=r*r*3.14;
+
+
+
+    }
+</script>
+
+</html>

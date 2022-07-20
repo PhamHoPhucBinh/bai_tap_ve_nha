@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>way 1 : onchange</title>
+</head>
+<body>
+<select id="selectedevent" onchange="do_sth()">
+    <option value="Pham">Pham</option>
+    <option value="Ho">Ho</option>
+    <option value="Phuc">Phuc</option>
+    <option value="Binh">Binh</option>
+
+</select>
+</body>
+</html>
+<script>
+    function do_sth() {
+        var selectedValue = document.getElementById("selectedevent").value;
+        alert(selectedValue);
+
+    }
+</script>

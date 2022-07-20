@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>way 2 : change function</title>
+</head>
+<body>
+<select id="selectedevent">
+    <option value="Pham">Pham</option>
+    <option value="Ho">Ho</option>
+    <option value="Phuc">Phuc</option>
+    <option value="Binh">Binh</option>
+
+</select>
+</body>
+</html>
+<script>
+    var selectedElement = document.getElementById("selectedevent");
+    selectedElement.addEventListener("change",changeFunction);
+    function changeFunction() {
+        var selectValue = document.getElementById("selectedevent").value;
+        alert(selectValue);
+    }
+</script>

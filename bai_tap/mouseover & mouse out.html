@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouseover & mouseout</title>
+</head>
+<body>
+<h1 id="click" onmouseout="chuotra()" onmouseover="chuotvao()">pham ho phuc binh</h1>
+</body>
+</html>
+<script>
+    function chuotvao() {
+        document.getElementById("click").style.color = "green";
+
+    }
+    function chuotra() {
+        document.getElementById("click").style.color = "red";
+
+    }
+</script>

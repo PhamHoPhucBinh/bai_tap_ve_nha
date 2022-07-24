@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh chi so can nang BMI</title>
+</head>
+<br>
+<label>Weight</label></br>
+<input id="weight" type="number"></br>
+
+<label>Height</label></br>
+<input id="height" type="number"></br>
+
+<button type="button" onclick="tinhBMI()" >BMI Result</button>
+<input id="bmiresult" type="text"> </input>
+
+
+</body>
+<script>
+function tinhBMI() {
+    let cannang = parseFloat(document.getElementById("weight").value);
+
+
+    let chieucao = parseFloat(document.getElementById("height").value);
+
+
+    let BMI = cannang / ( chieucao ^ 2 );
+
+    if (BMI < 18)
+        document.getElementById("bmiresult").value = 'Underweight' ;
+    else if (BMI < 25.0)
+        document.getElementById("bmiresult").value = "Normal" ;
+    else if (BMI < 30.0)
+        document.getElementById("bmiresult").value = "Overweight" ;
+    else
+        document.getElementById("bmiresult").value = "Obese" ;
+
+}
+</script>
+</html>

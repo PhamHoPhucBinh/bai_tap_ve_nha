@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap CTDK2 6</title>
+</head>
+<body>
+<h1>giai phuong trinh bac 1</h1>
+<p>pt bac 1 co dang : ax+b=0 </p>
+<p>nhap a</p>
+<input id="a" type="number"/>
+<p>nhap b</p>
+<input id="b" type="number"/>
+<button type="button" onclick="cal()">Calculate</button>
+<input id="result" readonly type="text"/>
+</body>
+<script>
+    function cal() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        if (a == 0) {
+            if (b != 0) {
+
+            document.getElementById("result").value = "PT vo nghiem";
+
+            }else {
+                document.getElementById("result").value = "PT vo so nghiem";
+            }
+        }else {
+            document.getElementById("result").value = -b/a ;
+        }}
+</script>
+</html>

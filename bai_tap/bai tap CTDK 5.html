@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap CTDK 5</title>
+</head>
+
+<body>
+<h1>bai 5</h1>
+
+<p>nhap diem ktra 15'</p>
+<input id="diemktra" type="number"/></br>
+<p>nhap diem giua ky</p>
+<input id="diemgiuaky" type="number"/></br>
+<p>nhap diem cuoi ky</p>
+<input id="diemcuoiky" type="number"/></br>
+<button onclick="check()" type="button" value="danh gia">Danh gia</button>
+<p>ket qua hoc tap</p>
+<input id="result" type="text" readonly/>
+
+
+
+
+</body>
+
+<script>
+function check() {
+    let a = parseInt(document.getElementById("diemktra").value);
+    let b = parseInt(document.getElementById("diemgiuaky").value);
+    let c = parseInt(document.getElementById("diemcuoiky").value);
+    let d = ( a + 2*b + 3*c )/6
+    if (d>=8){
+        document.getElementById("result").value = "Hoc Sinh gioi";
+    }else if(6.5 <= d && d < 8){
+        document.getElementById("result").value = "Hoc Sinh Kha";
+    }else {
+        document.getElementById("result").value = "Hoc Sinh trung binh";
+    }
+
+}
+</script>
+</html>

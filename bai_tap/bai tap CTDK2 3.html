@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap CTDK2 3</title>
+</head>
+<body>
+<h1>Tinh dien tich hinh vuong</h1>
+<h2>nhap vao do dai canh hinh vuong</h2>
+<input id="doC" type="number"/>
+<span>m</span></br>
+<button onclick="transfer()" type="button">Tinh Dien Tich</button></br>
+<input id="doF" type="number" readonly/>
+<span>m<sup>2</sup></span>
+</body>
+<script>
+    function transfer() {
+        let a = parseInt(document.getElementById("doC").value);
+        let b = a * a;
+        document.getElementById("doF").value = b;
+    }
+</script>
+</html>

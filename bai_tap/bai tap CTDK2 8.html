@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap CTDK2 8</title>
+</head>
+<body>
+<h1>Kiem tra tuoi cua 1 nguoi</h1>
+<h2>Nhap so tuoi cua ban</h2>
+<input id="age" type="number"/></br>
+<button onclick="age()" type="button">Check</button></br>
+<input type="text" readonly id="result"/></br>
+
+</body>
+<script>
+    function age() {
+        let a = document.getElementById("age").value;
+        if (a>0&&a<120){
+            document.getElementById("result").value  = "day la tuoi cua nguoi"
+        }else {
+            document.getElementById("result").value  = "may deo phai con nguoi"
+        }
+
+    }
+</script>
+</html>

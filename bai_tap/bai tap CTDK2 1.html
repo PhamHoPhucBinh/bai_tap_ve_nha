@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CTDK 2 bai 1</title>
+</head>
+<body>
+<h1> chuyen do C sang do F</h1>
+<h2>nhap vao nhiet do can doi</h2>
+<input id="doC" type="number"/>
+<span><sup>o</sup>C</span>
+<button onclick="transfer()" type="button">Transfer</button>
+<input id="doF" type="number" readonly/>
+<span><sup>o</sup>F</span>
+</body>
+<script>
+    function transfer() {
+let a = parseInt(document.getElementById("doC").value);
+let b = a  *  9/5 + 32;
+document.getElementById("doF").value = b;
+    }
+</script>
+</html>

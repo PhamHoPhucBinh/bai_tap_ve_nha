@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap CTDK2 10</title>
+</head>
+<body>
+<h1>Tinh tien dien</h1>
+<h2>Lượng điện tiêu thụ của thiết bị = Công suất x Thời gian sử dụng </h2>
+<p>Nhap cong suat thiet bi dien</p>
+<input id="congsuat" type="number"/></br>
+<p>Nhap thoi gian su dung dien</p>
+<input id="thoigian" type="number"/></br>
+<button onclick="tinhtien()" type="button">Tinh tien</button></br>
+<input id="result" type="number"/>
+</body>
+<script>
+    function tinhtien() {
+        let congsuat = parseInt(document.getElementById("congsuat").value);
+        let thoigian = parseInt(document.getElementById("thoigian").value);
+        let tieuthu = congsuat*thoigian;
+        let tiendien;
+        if (tieuthu>=0&&tieuthu<600){
+            tiendien = tieuthu*1680;
+            document.getElementById("result").value = tiendien;
+        }else{
+
+        }
+    }
+</script>
+</html>

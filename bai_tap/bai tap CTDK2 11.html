@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap CTDK2 11</title>
+</head>
+<body>
+<h1>tinh thue thu nhap ca nhan</h1>
+<p>thu nhap hang thang cua ban</p>
+<input id="salary" type="number" />
+<span>Trieu Dong</span></br>
+
+<button onclick="tax()" type="button">tinh tien thue</button></br>
+<input id="result" type="number" readonly/>
+<span>Trieu Dong</span></br>
+</body>
+<script>
+    function tax() {
+        let a = document.getElementById("salary").value;
+        if (a<5){
+            document.getElementById("result").value =  a*5/100;
+        }else if(a>=5&&a<10){
+            document.getElementById("result").value =  a*10/100;
+        }else if(a>=10&&a<18){
+            document.getElementById("result").value =  a*15/100;
+        }else if(a>=18&&a<32){
+            document.getElementById("result").value =  a*20/100;
+        }else if(a>=32&&a<52){
+            document.getElementById("result").value =  a*25/100;
+        }else if(a>=52&&a<80){
+            document.getElementById("result").value =  a*30/100;
+        }else if(a>=80){
+            document.getElementById("result").value =  a*35/100;
+        }
+
+    }
+</script>
+</html>

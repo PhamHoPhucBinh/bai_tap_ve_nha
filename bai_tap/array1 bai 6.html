@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array1 bai 6</title>
+</head>
+<body>
+<p>nhap vao cac so nguyen to</p>
+<input type="number" id="add"/></br>
+<button onclick="add()" id="buttonAdd" type="button">add</button></br>
+<input type="number" id="check"/>
+<button onclick="check()" type="button">check</button>
+<input id="result" type="text"/>
+<script>
+    let array = [];
+    let count = 0;
+    // while (count<10){
+    //     let element =
+    // }
+    function add() {
+
+        array.push(document.getElementById("add").value);
+        document.getElementById("add").value = '';
+        console.log(array)
+        console.log(count);
+        count++;
+        if(count==10){
+            let inputAdd = document.getElementById("add");
+            inputAdd.setAttribute("type", "hidden");
+            alert("ban da nhap du 10 so");
+        }
+    }
+    function check() {
+        let a = document.getElementById("check").value;
+        for(i=0;i<array.length;i++){
+            if (a===array[i]){
+                document.getElementById("result").value = "co nam trong array";
+
+            }else {
+                document.getElementById("result").value= "k nam trong array";
+            }
+            document.getElementById("add").value = '' ;
+        }
+
+    }
+</script>
+</body>
+</html>

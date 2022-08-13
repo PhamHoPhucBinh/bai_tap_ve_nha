@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>array1 bai 6</title>
+    <title>array1 bai 7</title>
 </head>
 <body>
 <p>nhap vao cac so nguyen to</p>
@@ -10,7 +10,6 @@
 <button onclick="add()" id="buttonAdd" type="button">add</button></br>
 <input type="number" id="check"/>
 <button onclick="check()" type="button">check</button>
-<input id="result" type="text"/>
 <script>
     let array = [];
     let count = 0;
@@ -27,25 +26,27 @@
             alert("ban da nhap du 10 so");
         }
     }
+
     function check() {
-        let a = document.getElementById("check").value;
         let flag = false;
+        let v = document.getElementById("check").value;
         for (i = 0; i < array.length; i++) {
-            if (a === array[i]) {
+            if (v === array[i]) {
                 flag = true;
                 break;
-
             }
         }
 
+
+        for (i = 0; i < array.length; i++) {
+            array[i] = array[i + 1];
+
+        }
         if (flag) {
-               document.getElementById("result").value = "co nam trong array";
-            } else {
-                document.getElementById("result").value = "k nam trong array";
-            }
+            array[array.length - 1] = 0;
         }
-
-
+        console.log(array);
+    }
 
 </script>
 </body>

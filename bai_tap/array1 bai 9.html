@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>array1 bai 9</title>
+</head>
+<body>
+<p>Nhap vao mang a</p>
+<input id="arrayA" type="number">
+<button id="buttonA" onclick="addA()" type="button"/>add</button></br>
+
+<p>Nhap vao mang b</p>
+<input id="arrayB" type="number">
+<button id="buttonB" onclick="addB()" type="button"/>add</button></br>
+
+<p>ket qua cua mang c</p>
+<button type="button" onclick="addC">result</button></br>
+<input id="arrayC" type="number/">
+
+<script>
+   let arrayA = [];
+   let arrayB = [];
+   let arrayC = [];
+   let count1 = 0;
+   let count2 = 0;
+   function addA() {
+
+           arrayA.push(document.getElementById('arrayA').value);
+           document.getElementById('arrayA').value = '';
+           count1++
+       console.log(arrayA);
+           if (count1==10){
+               document.getElementById('arrayA').setAttribute('type','hidden');
+               document.getElementById('buttonA').disabled = true;
+                alert('da nhap du 10 so');
+           }
+   return;
+   }
+
+   function addB() {
+
+       arrayB.push(document.getElementById('arrayB').value);
+       document.getElementById('arrayB').value = '';
+       count2++
+       console.log(arrayB);
+       if (count2==10){
+           document.getElementById('arrayB').setAttribute('type','hidden');
+           document.getElementById('buttonB').disabled = true;
+           alert('da nhap du 10 so');
+       }
+   return;
+   }
+
+   function addC() {
+    arrayC = arrayA.concat(arrayB);
+       console.log(arrayC);
+       document.getElementById("arrayC").value = arrayC;
+   }
+
+
+
+
+</script>
+</body>
+</html>

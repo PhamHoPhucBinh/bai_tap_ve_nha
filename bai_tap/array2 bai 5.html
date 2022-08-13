@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array2 bai 5</title>
+</head>
+<body>
+<p>Nhap vao mang a</p>
+<input id="arrayA" type="number">
+<button id="buttonA" onclick="addA()" type="button"/>add</button></br>
+
+<p>Nhap vao mang b</p>
+<input id="arrayB" type="number">
+<button id="buttonB" onclick="addB()" type="button"/>add</button></br>
+
+<p>ket qua cua mang c</p>
+<button type="button" onclick="check()">result</button></br>
+<input id="result" type="number/">
+
+<script>
+
+    let arrayA = [];
+    let arrayB = [];
+    let count1 = 0;
+    let count2 = 0;
+
+    function addA() {
+
+        arrayA.push(document.getElementById('arrayA').value);
+        document.getElementById('arrayA').value = '';
+        count1++
+        console.log(arrayA);
+        if (count1==10){
+            document.getElementById('arrayA').setAttribute('type','hidden');
+            document.getElementById('buttonA').disabled = true;
+            alert('da nhap du 10 so');
+        }
+        return;
+    }
+
+    function addB() {
+
+        arrayB.push(document.getElementById('arrayB').value);
+        document.getElementById('arrayB').value = '';
+        count2++
+        console.log(arrayB);
+        if (count2==10){
+            document.getElementById('arrayB').setAttribute('type','hidden');
+            document.getElementById('buttonB').disabled = true;
+            alert('da nhap du 10 so');
+        }
+        return;
+    }
+
+    function check() {
+        let flag = false;
+        if(arrayA===arrayB){
+            flag = true;
+            document.getElementById("result").value = "giong nhau";
+
+        }else{
+            document.getElementById("result").value = "k giong";
+        }
+
+    }
+
+</script>
+</body>
+</html>

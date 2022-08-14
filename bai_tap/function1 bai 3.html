@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function1 bai 3</title>
+</head>
+<body>
+<p>insert first number</p>
+<input id="num1" type="number"/></br>
+<p>insert second number</p>
+<input id="num2" type="number"/></br>
+<button onclick="check()" type="button">check</button></br>
+<input id="result" type="number"/>
+
+<script>
+    function check(num) {
+        let a = parseInt(document.getElementById("num1").value);
+        let b = parseInt(document.getElementById("num2").value);
+        if (a>b){
+            alert("nhap lai di")
+        }else if(a<=b){
+            let c = a+b;
+            document.getElementById("result").value = c;
+        }
+    }
+</script>
+
+
+</body>
+</html>

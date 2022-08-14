@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function1 bai 5</title>
+</head>
+<body>
+<p>Click the button to demonstrate the prompt box.</p>
+
+<button onclick="myFunction()">Try it</button>
+<script>
+    function myFunction() {
+        let a = prompt("nhap vao ten ngoi sao");
+        let array1 = [ "Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let array2 = [ "Ursa_Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa_Major", "Leo"];
+
+
+
+        for (let i = 0; i < array1.length; i++) {
+
+            if (a == array1[i]) {
+                let b = array1.indexOf(array1[i]);
+                return alert(array2[b]);
+            }
+
+            }
+        return alert("k ton tai");
+        }
+
+</script>
+</body>
+</html>

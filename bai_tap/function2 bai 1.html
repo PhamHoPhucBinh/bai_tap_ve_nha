@@ -5,6 +5,17 @@
     <title>function2 bai 1</title>
 </head>
 <body>
+<p>insert the number you need to square:</p>
+<input id="number" type="number"/></br>
+<button onclick="square()" type="button">Square this number</button></br>
+<input type="number" id="result" readonly>
 
+<script>
+    function square() {
+        let a = parseInt(document.getElementById("number").value);
+        let b = a*a;
+        return document.getElementById("result").value = b;
+    }
+</script>
 </body>
 </html>

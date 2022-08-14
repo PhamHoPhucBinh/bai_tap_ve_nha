@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function2 bai 3</title>
+</head>
+<body>
+<p>nhap so can tinh giai thua</p>
+<input id="num" type="number"></br>
+<button onclick="cal()" type="button"/>cal</button></br>
+<input id="result" type="number">
+
+<script>
+    let a = document.getElementById("num").value;
+
+    function cal(a) {
+        let result = 1;
+        for (let i = 1; i < a ; i++) {
+            result = result * i;
+        }
+
+        return result;
+        document.getElementById("result").value = result;
+
+
+    }
+
+
+</script>
+</body>
+</html>

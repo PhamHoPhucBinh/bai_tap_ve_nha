@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function2 bai 2</title>
+</head>
+<body>
+<p>Nhap ban kinh hinh tron</p>
+<input id="r" type="number">
+<p>Dien tich hinh tron</p>
+<input type="number" oninput="tinhdientich()"  id="dientich">
+<p>Chu vi hinh tron</p>
+<input type="number" oninput="tinhchuvi()"  id="chuvi">
+
+<script>
+
+    function tinhdientich() {
+        let r = document.getElementById("r").value;
+        let d = r*r*Math.PI;
+         document.getElementById("dientich").value = d.toFixed(3);
+    }
+
+    function tinhchuvi() {
+        let r = document.getElementById("r").value;
+        let c = r*2*Math.PI;
+        document.getElementById("chuvi").value = c.toFixed(3);
+    }
+</script>
+</body>
+</html>

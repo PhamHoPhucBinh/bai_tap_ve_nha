@@ -8,23 +8,28 @@
 <p>nhap so can tinh giai thua</p>
 <input id="num" type="number"></br>
 <button onclick="cal()" type="button"/>cal</button></br>
-<input id="result" type="number">
+<input id="res" type="number">
 
 <script>
-    let a = document.getElementById("num").value;
-
+    let a = parseInt(document.getElementById("num").value);
+    let res = cal();
     function cal(a) {
-        let result = 1;
-        for (let i = 1; i < a ; i++) {
-            result = result * i;
+        let res = 1;
+        for (let i = 1; i <= a ; i++) {
+            res *= i ;
         }
-
-        return result;
-        document.getElementById("result").value = result;
-
-
+        return document.getElementById("res").value = res;
     }
 
+    // let num = +prompt(" enter a number: ");
+    // let result = cacul();
+    // function cacul() {
+    //     let result = 1;
+    //     for(let i = 1;i <= num; i++){
+    //         result *= i;
+    //     }
+    //     return alert(result)
+    // }
 
 </script>
 </body>

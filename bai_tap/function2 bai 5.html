@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function2 bai 5</title>
+</head>
+<body>
+<p>Nhap vao 3 so nguyen bat ki</p>
+<input id="input" type="number"/></br>
+<button id="add" onclick="add()">Add</button></br>
+<p>so nho nhat la</p>
+<button id="button" onclick="check()" type="button">check</button></br>
+<input id="result" type="number" readonly/>
+<script>
+    let count = 0;
+    let array = [];
+    function add() {
+        array.push(parseInt(document.getElementById("input").value));
+        document.getElementById("input").value = "";
+        count++
+        if (count>=3){
+            alert("ban da nhap du 3 so");
+            document.getElementById("add").disabled = true;
+        }
+        console.log(array[0]);
+    }
+
+    function check() {
+        if (array[0]<array[1] && array[0]<array[2]){
+            document.getElementById("result").value = array[0];
+
+        }else if (array[1]<array[0] && array[1]<array[2]){
+            document.getElementById("result").value = array[1];
+
+        }else {
+            document.getElementById("result").value = array[2];
+            }
+    }
+</script>
+</body>
+</html>

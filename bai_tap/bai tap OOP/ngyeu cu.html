@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>danh sach nguoi yeu cu</title>
+</head>
+<style>
+    table#t01 {
+        width: 100%;
+        background-color: #f1f1c1;
+    }
+</style>
+<body>
+<input type="text" id="name" placeholder="insert your ex's name"  >
+<input type="number" id="age" placeholder="insert your ex's age"  >
+<input type="text" id="location" placeholder="insert your ex's location"  >
+<input type="number" id="time" placeholder="how many time do we meet?"  >
+<input type="button" onclick="add()" value="ADD"  >
+<p id="result"></p>
+<script>
+    class ExGirlFriend{
+        constructor(name,age,location,time) {
+
+            this.name = name;
+            this.age = age;
+            this.location = location;
+            this.time = time;
+        }
+
+
+        setName(name){
+            this.name = name;
+        }
+        setAge(age){
+            this.age = age;
+        }
+        setLocation(location){
+            this.location = location;
+        }
+        setTime(time){
+            this.time = time;
+        }
+
+        getName(){
+            return this.name;
+        }
+        getAge(){
+            return this.age;
+        }
+        getLocation(){
+            return this.location;
+        }
+        getTime(){
+            return this.time;
+        }
+    }
+    let exGirlFriendList = [];
+    // let exGirlFriend1 = new ExGirlFriend(1,"Tien","19","Da Nang","2");
+    // let exGirlFriend2 = new ExGirlFriend(2,"Thao","16","Quang Nam","4");
+    // let exGirlFriend3 = new ExGirlFriend(3,"Nga","22","Ha Tinh","5");
+    //
+    // exGirlFriendList.push(exGirlFriend1);
+    // exGirlFriendList.push(exGirlFriend2);
+    // exGirlFriendList.push(exGirlFriend3);
+
+    display(exGirlFriendList);
+
+    function display(list) {
+        let sout = '<table>\n' +
+            '    <tr>\n' +
+            '        <th>ID</th>\n' +
+            '        <th>Name</th>\n' +
+            '        <th>Age</th>\n' +
+            '        <th>Location</th>\n' +
+            '        <th>Time</th>\n' +
+            '    </tr>';
+        for (let i=0;i<list.length;i++){
+            sout += '<tr>\n' +
+                '<td>' + (i+1) + '</td>' +
+                '<td>' + list[i].getName() + '</td>' +
+                '<td>' + list[i].getAge() + '</td>' +
+                '<td>' + list[i].getLocation() + '</td>' +
+                '<td>' + list[i].getTime() + '</td>' +
+                '<td><input type="button" onclick="edit('+i+')" value="Edit">'+'</td>' +
+                '<td><input type="button" ">'+'</td>' +
+                '</tr>'
+        }
+        sout += '</table>';
+        document.getElementById("result").innerHTML = sout;
+        
+    }
+    function add() {
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let location = document.getElementById("location").value;
+    let time = document.getElementById("time").value;
+    let newData = new ExGirlFriend(name,age,location,time);
+    exGirlFriendList.push(newData);
+    display(exGirlFriendList);
+    document.getElementById("name").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("location").value = "";
+    document.getElementById("time").value = 0;
+
+
+    }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam va Eva</title>
+</head>
+<body>
+<script>
+    let Weight = 0;
+
+    class Apple{
+
+        constructor() {
+            this.Weight = 10;
+        }
+        getWeight(){
+            return this.Weight;
+        }
+        decrease(){
+            this.Weight -= 1;
+        }
+        isEmpty(){
+            if (this.Weight ==0){
+                return true;
+            }else {
+                return false;
+            }
+        }
+
+    }
+    class Human{
+        constructor(name,gender,weight) {
+            this.name = name;
+            this.weight = weight;
+            this.gender = gender;
+        }
+        setName(name){
+            this.name = name;
+        }
+        setWeight(weight){
+            this.weight = weight;
+        }
+        getName(){
+            return this.name;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        say(word){
+            console.log(word)
+        }
+        eat(apple){
+            if (!this.checkApple(apple)) {
+                apple.decrease();
+                this.weight += 1;
+            }else{
+                this.say("het tao roi");
+            }
+        }
+        checkApple(apple){
+            return apple.isEmpty();
+        }
+        setGender(gender){
+            this.gender = gender;
+        }
+        isMale(){
+            return this.gender;
+        }
+
+    }
+
+    let apple1 = new Apple();
+    let adam = new Human("Adam",true,50);
+    let eva = new Human("Eva",false,40);
+
+    console.log(apple1.getWeight(),"00");
+    console.log(adam.getWeight(),"00");
+    console.log(eva.getWeight(),"00");
+
+    while (!apple1.isEmpty()) {
+        adam.eat(apple1);
+        console.log(apple1.getWeight());
+        eva.eat(apple1);
+    }
+    console.log(apple1.getWeight(),"a");
+    console.log(adam.getWeight(),"a");
+    console.log(eva.getWeight(),"a");
+
+    for (let i = apple1.getWeight(); i >0. ; i--) {
+        adam.eat(apple1);
+        console.log(apple1.getWeight());
+        eva.eat(apple1);
+    }
+
+
+</script>
+</body>
+</html>

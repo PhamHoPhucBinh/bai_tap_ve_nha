@@ -17,7 +17,7 @@
             return this.Weight;
         }
         decrease(){
-            this.Weight -= 1;
+            this.Weight--;
         }
         isEmpty(){
             if (this.Weight ==0){
@@ -77,16 +77,19 @@
     console.log(adam.getWeight(),"00");
     console.log(eva.getWeight(),"00");
 
-    while (!apple1.isEmpty()) {
+    do{
         adam.eat(apple1);
         console.log(apple1.getWeight());
         eva.eat(apple1);
+    }
+    while (!apple1.isEmpty()){
+        adam.say("het tao roi");
     }
     console.log(apple1.getWeight(),"a");
     console.log(adam.getWeight(),"a");
     console.log(eva.getWeight(),"a");
 
-    for (let i = apple1.getWeight(); i >0. ; i--) {
+    for (let i = apple1.getWeight(); i >0 ; i--) {
         adam.eat(apple1);
         console.log(apple1.getWeight());
         eva.eat(apple1);

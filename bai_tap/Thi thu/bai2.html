@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<input id="array" type="text">
+<button id="button" onclick="add()" type="button">ADD Number</button>
+<script>
+    let stringsArray = "";
+
+    function add() {
+        stringsArray = (document.getElementById("array").value)
+        let arr = stringsArray.split(' ')
+        for (let i = 0; i < arr.length; i++) {
+
+            if (arr[i] == "") {
+                arr.splice(i, 1);
+                i--;
+            }
+        }
+        for (let i = 0; i < arr.length ; i++) {
+             arr[i].charAt(0).toUpperCase();
+            console.log(arr[i].charAt(0).toUpperCase());
+        }
+
+    }
+</script>
+</body>
+</html>

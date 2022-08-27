@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>temperature</title>
+</head>
+<body>
+<p>Nhap do C</p>
+<input id="doC" type="number"></br>
+<button type="button" onclick="cal()">Transfer</button>
+<p id="show"></p>
+<p id="show2"></p>
+
+<script>
+
+    class Temperature {
+        constructor(temperature) {
+            this.temperature = temperature;
+        }
+
+        transferF() {
+            return  this.temperature *1.8 + 32;
+        }
+
+        tranferK(temperature) {
+            return temperature = temperature + 273.15;
+        }
+    }
+
+    console.log(typeof doC);
+
+function cal() {
+    let doC = parseInt(document.getElementById("doC").value);
+    let temp = new Temperature(doC);
+    document.getElementById("show").innerText = temp.transferF(doC);
+    document.getElementById("show2").innerText = temp.tranferK(doC);
+    document.getElementById("doC").value = "";
+
+}
+
+</script>
+</body>
+</html>

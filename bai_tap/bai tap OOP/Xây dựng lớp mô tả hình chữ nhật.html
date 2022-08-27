@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(width, lenght) {
+            this.width = width;
+            this.length = length;
+        }
+
+        calArea(width, length){
+            return width*length;
+        }
+        calParameter(width,length){
+            return (width+length)*2;
+        }
+    }
+    let width = 20;
+    let length = 40;
+    let rectangle1 = new Rectangle(width,length);
+    console.log(rectangle1.calArea(width,length));
+    console.log(rectangle1.calParameter(width,length));
+
+
+</script>
+</body>
+</html>

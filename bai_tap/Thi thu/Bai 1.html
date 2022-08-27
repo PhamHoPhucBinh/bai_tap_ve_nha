@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<input id="array" type="number">
+<button id="button" onclick="add()" type="button">ADD Number</button>
+<p>The numbers are in Array right now</p>
+<p id="result"></p>
+<button onclick="calculate()" type="button">Calculate</button>
+<input id="ave" type="number" readonly value="the average">
+
+<script>
+    let array = [];
+    let check = [];
+
+    function add() {
+        if (array.length <= 50) {
+            array.push(document.getElementById("array").value);
+            document.getElementById("result").innerText = array;
+            document.getElementById("result").value = "";
+        } else {
+            document.getElementById("button").disabled = true;
+            alert("you are reached maximum of limit");
+        }
+    }
+
+    function calculate() {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 5 === 0&& array[i%3===0]) {
+                check.push(array[i]);
+
+            }
+            console.log(check);
+        }
+
+
+        let sum = 0;
+        for (let i = 0; i < check.length; i++) {
+            sum += +check[i];
+        }
+
+        let ave = sum / check.length
+        document.getElementById("ave").value = ave;
+
+        }
+    }
+
+
+</script>
+</body>
+</html>

@@ -15,37 +15,32 @@
 <script>
     let array = [];
     let check = [];
+    console.log(array);
 
     function add() {
         if (array.length <= 50) {
             array.push(document.getElementById("array").value);
             document.getElementById("result").innerText = array;
-            document.getElementById("result").value = "";
+
         } else {
             document.getElementById("button").disabled = true;
             alert("you are reached maximum of limit");
         }
+        document.getElementById("result").value = "";
     }
 
+    let sum = 0;
     function calculate() {
         for (let i = 0; i < array.length; i++) {
-            if (array[i] % 5 === 0&& array[i%3===0]) {
+            if (array[i] % 5 === 0 && i % 3 === 0) {
                 check.push(array[i]);
-
             }
-            console.log(check);
         }
-
-
-        let sum = 0;
         for (let i = 0; i < check.length; i++) {
             sum += +check[i];
-        }
-
-        let ave = sum / check.length
-        document.getElementById("ave").value = ave;
 
         }
+        document.getElementById("ave").value = sum / check.length;
     }
 
 

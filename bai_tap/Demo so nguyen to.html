@@ -2,33 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Demo : So nguyen to</title>
+    <title>[Bài tập] Hàm kiểm tra số nguyên tố</title>
 </head>
 <body>
-
-</body>
 <script>
-    let size = prompt("nhập vào số lượng số nguyên tố cần in ra")
-    let count =0; // đếm số lượng số nguyên tố tìm thấy
-    let n = 2; // bắt đầu kiểm tra từ số 2
-    // điều kiện dừng khi tìm thấy đủ số lượng số nguyên tố
-    while (count<size){
-        let flag=true;
-        // kiểm tra xem số n có chia hết cho bất kỳ số nào trong khoảng từ 2 -> n-1
-        for (let i = 2; i <n; i++) {
-            if (n%i==0){
-                flag=false;
-                break;
+    function isPrime(number) {
+        let isPrime = true;
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                isPrime = false;
             }
         }
-        // nếu là số nguyến tố thì in ra
-        if (flag==true){
-            document.write(n+"<br>");
-            // đếm số số nguyên tố đã tìm thấy
-            count++;
+        return isPrime;
+    }
+
+    for (let i = 2; i < 100; i++) {
+        if (isPrime(i)) {
+            console.log(i)
         }
-        // tăng 1 thêm để kiểm tra số tiếp theo
-        n++;
     }
 </script>
+</body>
 </html>
